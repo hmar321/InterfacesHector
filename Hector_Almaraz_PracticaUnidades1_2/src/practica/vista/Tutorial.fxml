@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -17,48 +18,49 @@
                <content>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                      <children>
-                        <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0" VBox.vgrow="SOMETIMES">
-                           <children>
-                              <Label text="¿En qué consiste?">
-                                 <font>
-                                    <Font name="Arial Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Es la pestaña principal donde se presenta una vista general&#10;de nuestra veterinaria así como los distintos servicios que&#10;ofrecemos.">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0" VBox.vgrow="SOMETIMES">
-                           <children>
-                              <Label text="¿Para qué sirve?">
-                                 <font>
-                                    <Font name="Arial Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Servirá como nexo para todas las páginas y donde siempre&#10;podrás volver simpre que te pierdas.">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0" VBox.vgrow="SOMETIMES">
-                           <children>
-                              <Label text="¿Qué servicio ofrecemos?">
-                                 <font>
-                                    <Font name="Arial Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Esta es una clínica veterinaria en la que te podrás&#10;registrar y pedir revisiones, vacunas y consultas &#10;entre otros.">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
+                        <Accordion VBox.vgrow="SOMETIMES">
+                          <panes>
+                            <TitledPane animated="false" text="¿En qué consiste?">
+                                 <content>
+                                    <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Es la pestaña principal donde se presenta una vista general&#10;de nuestra veterinaria así como los distintos servicios que&#10;ofrecemos.">
+                                             <font>
+                                                <Font name="Arial" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="¿Para qué sirve?">
+                                 <content>
+                                    <VBox prefHeight="70.0" prefWidth="558.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Sirve como nexo de entre todas las páginas&#10;de la aplicación.">
+                                             <font>
+                                                <Font name="Arial" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="¿Qué servicio ofrecemos?">
+                                 <content>
+                                    <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Esta es una clínica veterinaria en la que te podrás&#10;registrar y pedir revisiones, vacunas y consultas &#10;entre otros.">
+                                             <font>
+                                                <Font name="Arial" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
                      </children>
                      <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -70,48 +72,49 @@
                <content>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                      <children>
-                        <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0" VBox.vgrow="SOMETIMES">
-                           <children>
-                              <Label text="¿En qué consiste?">
-                                 <font>
-                                    <Font name="Arial Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="En esta pestaña tendrás que registrarte introduciendo tus&#10;datos y los de tu mascota.">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0" VBox.vgrow="SOMETIMES">
-                           <children>
-                              <Label text="¿Para qué sirve?">
-                                 <font>
-                                    <Font name="Arial Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Te servirá para crear tu perfil en el que podras consultar&#10;las citas de tus mascotas y sus estados.">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0" VBox.vgrow="SOMETIMES">
-                           <children>
-                              <Label text="¿Qué hago si tengo más de una mascota?">
-                                 <font>
-                                    <Font name="Arial Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="No te preocupes, una vez creado tu perfil con&#10;tu primera mascota podrás añadir el resto&#10;dentro de tu perfil.">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
+                        <Accordion VBox.vgrow="SOMETIMES">
+                          <panes>
+                            <TitledPane animated="false" text="¿En qué consiste?">
+                                 <content>
+                                    <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0">
+                                       <children>
+                                          <Label text="En esta pestaña tendrás que registrarte introduciendo tus&#10;datos y los de tu mascota.">
+                                             <font>
+                                                <Font name="Arial" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                            <TitledPane animated="false" text="¿Para qué sirve?">
+                                 <content>
+                                    <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Te servirá para crear tu perfil en el que podras consultar&#10;las citas de tus mascotas y sus estados.">
+                                             <font>
+                                                <Font name="Arial" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane prefHeight="200.0" prefWidth="200.0" text="¿Qué hago si tengo más de una mascota?">
+                                 <content>
+                                    <VBox prefHeight="70.0" prefWidth="400.0" spacing="10.0">
+                                       <children>
+                                          <Label text="No te preocupes, una vez creado tu perfil con&#10;tu primera mascota podrás añadir el resto&#10;dentro de tu perfil.">
+                                             <font>
+                                                <Font name="Arial" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
                      </children>
                      <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
