@@ -11,9 +11,9 @@
         <menus>
           <Menu mnemonicParsing="false" text="Pestañas">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#abrirMenu" text="Menu" />
-                  <MenuItem mnemonicParsing="false" onAction="#abrirFormulario" text="Formulario" />
-                  <MenuItem mnemonicParsing="false" onAction="#abrirTutorial" text="Tutorial" />
+              <MenuItem fx:id="menuButton" mnemonicParsing="false" text="Menu" />
+                  <MenuItem fx:id="perfilButton" mnemonicParsing="false" text="Formulario" />
+                  <MenuItem fx:id="tutorialButton" mnemonicParsing="false" text="Tutorial" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Editar">
