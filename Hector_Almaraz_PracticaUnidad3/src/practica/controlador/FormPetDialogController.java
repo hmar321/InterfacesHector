@@ -31,7 +31,8 @@ public class FormPetDialogController {
 	private Button enviarButton;
 
 	private Stage dialogStage;
-	private Mascota mascota;
+    private Mascota mascota;
+    private boolean okClicked = false;
 
 	@FXML
 	void initialize() {

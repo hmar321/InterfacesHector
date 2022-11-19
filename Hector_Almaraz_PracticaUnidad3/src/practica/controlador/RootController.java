@@ -1,19 +1,15 @@
 package practica.controlador;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.MenuItem;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
+import practica.Menu;
 
 public class RootController {
 	// Pantalla principal en la que se añade o quita contenido
-	private BorderPane rootLayout;
+	private Menu mainApp;
 
 	@FXML
 	private ResourceBundle resources;
@@ -30,74 +26,20 @@ public class RootController {
 	private MenuItem tutorialButton;
 
 	@FXML
-	private void cerrarListado(ActionEvent event) {
-		// Se elimina el contenido del nodo central
-		rootLayout.setCenter(null);
-	}
-
-	@FXML
 	void initialize() {
 		menuButton.setOnAction(event -> {
-			try {
-				// Cargamos el archivo Controles Dinámicos
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(RootController.class.getResource("/practica/vista/Menu.fxml"));
-				BorderPane listadoControles = (BorderPane) loader.load();
-
-				// Se sitúa en el centro del diseño principal
-				rootLayout.setCenter(listadoControles);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			mainApp.setMenu();
 		});
 		tutorialButton.setOnAction(event -> {
-			try {
-				// Cargamos el archivo Controles Dinámicos
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(RootController.class.getResource("/practica/vista/Tutorial.fxml"));
-				HBox listadoControles = (HBox) loader.load();
-
-				// Se sitúa en el centro del diseño principal
-				rootLayout.setCenter(listadoControles);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			mainApp.setTutorial();
 		});
 		perfilButton.setOnAction(event->{
-			try {
-				// Cargamos el archivo Controles Dinámicos
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(RootController.class.getResource("/practica/vista/Perfil.fxml"));
-				HBox listadoControles = (HBox) loader.load();
-
-				// Se sitúa en el centro del diseño principal
-				rootLayout.setCenter(listadoControles);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			mainApp.setPerfil();
 		});
 	}
 
-	public BorderPane getRootLayout() {
-		return rootLayout;
-	}
-
-	public void setRootLayout(BorderPane rootLayout) {
-		this.rootLayout = rootLayout;
-	}
-
-	public void setMenu() {
-		try {
-			// Cargamos el archivo Controles Dinámicos
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(RootController.class.getResource("/practica/vista/Menu.fxml"));
-			BorderPane listadoControles = (BorderPane) loader.load();
-
-			// Se sitúa en el centro del diseño principal
-			rootLayout.setCenter(listadoControles);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public void setMainApp(Menu mainApp) {
+		this.mainApp=mainApp;
 	}
 
 }
