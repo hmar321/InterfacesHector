@@ -5,8 +5,11 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import practica.modelo.Mascota;
 
 public class FormUserDialogController {
+	
 
 	@FXML
 	private ResourceBundle resources;
@@ -20,10 +23,10 @@ public class FormUserDialogController {
 	@FXML
 	private Button enviarButton;
 
+
 	@FXML
 	void initialize() {
 		cerraButton.setOnAction(event -> {
-
 		});
 		enviarButton.setOnAction(event -> {
 

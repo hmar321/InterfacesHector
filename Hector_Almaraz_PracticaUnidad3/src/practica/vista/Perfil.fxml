@@ -31,10 +31,10 @@
                   <Label text="Domicilio" textFill="WHITE" GridPane.rowIndex="1" />
                   <Label text="Teléfono" textFill="WHITE" GridPane.rowIndex="2" />
                   <Label text="Email" textFill="WHITE" GridPane.rowIndex="3" />
-                  <Label fx:id="nombreUserLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" />
-                  <Label fx:id="domicilioUserLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label fx:id="telefonoUserLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label fx:id="emailUserLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="nombreUserLabel" text="Placeholder" textFill="WHITE" GridPane.columnIndex="1" />
+                  <Label fx:id="domicilioUserLabel" text="Placeholder" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="telefonoUserLabel" text="Placeholder" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="emailUserLabel" text="Placeholder" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
             <Label layoutX="15.0" layoutY="6.0" text="Tus datos" textFill="WHITE" />
@@ -79,10 +79,10 @@
                               <Label text="Especie:" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
                               <Label text="Nombre:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                               <Label text="Peso:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                              <Label fx:id="razaLabel" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                              <Label fx:id="especieLabel" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
-                              <Label fx:id="nombrePetLabel" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                              <Label fx:id="pesoLabel" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                              <Label fx:id="razaLabel" text="Placeholder" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Label fx:id="especieLabel" text="Placeholder" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                              <Label fx:id="nombrePetLabel" text="Placeholder" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <Label fx:id="pesoLabel" text="Placeholder" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                            </children>
                         </GridPane>
                         <HBox alignment="BOTTOM_RIGHT" layoutX="257.0" layoutY="471.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">

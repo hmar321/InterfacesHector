@@ -3,9 +3,11 @@ package practica.controlador;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
@@ -139,6 +141,24 @@ public class PerfilController {
 		    		errorAlert.showAndWait();
 		        }
 		});
+		especieLabel.textProperty().addListener((observable, oldValue, newValue) -> {
+			System.out.print("Especie label cambiado: ");
+	        System.out.println("old = " + oldValue + ", new = " + newValue);
+		});
+		razaLabel.textProperty().addListener((observable, oldValue, newValue) -> {
+			System.out.print("Raza label cambiado: ");
+	        System.out.println("old = " + oldValue + ", new = " + newValue);
+		});
+		nombrePetLabel.textProperty().addListener((observable, oldValue, newValue) -> {
+			System.out.print("Nombre label cambiado: ");
+	        System.out.println("old = " + oldValue + ", new = " + newValue);
+		});
+		pesoLabel.textProperty().addListener((observable, oldValue, newValue) -> {
+		System.out.print("Peso label cambiado: ");
+        System.out.println("old = " + oldValue + ", new = " + newValue);
+        
+	});
+		
 	}
 
 	public void setMainAppPerfil(Menu mainApp) {

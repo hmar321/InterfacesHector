@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
@@ -44,10 +45,10 @@ public class FormPetDialogController {
 	private ComboBox<String> especieComboBox;
 
 	@FXML
-    private Button cerrarButton;
+	private Button cerrarButton;
 
-    @FXML
-    private Button enviarButton;
+	@FXML
+	private Button enviarButton;
 
 	private Stage dialogStage;
 	private Mascota mascota;
@@ -58,12 +59,11 @@ public class FormPetDialogController {
 
 		// ChoiceBox con separador
 		especieComboBox.getItems().addAll("Perro", "Gato", "Ave", "Pez", "Otro");
-		especieComboBox.setValue("Selecciona una especie...");
-		
+
 		cerrarButton.setOnAction(event -> {
 			dialogStage.close();
 		});
-		
+
 		enviarButton.setOnAction(event -> {
 			if (isInputValid()) {
 				mascota.setEspecie(especieComboBox.getValue());
@@ -75,6 +75,44 @@ public class FormPetDialogController {
 				dialogStage.close();
 			}
 		});
+		nombrePetTextField.setOnKeyPressed((event) -> mostrarTecla(event, "presionada"));
+		nombrePetTextField.setOnKeyReleased((event) -> mostrarTecla(event, "soltada"));
+		nombrePetTextField.setOnKeyTyped((event) -> mostrarTecla(event, "escrita"));
+		razaTextField.addEventHandler(KeyEvent.KEY_TYPED, event -> {
+
+			String type = event.getEventType().getName();
+			String source = event.getSource().getClass().getSimpleName();
+			String target = event.getTarget().getClass().getSimpleName();
+
+			System.out.println("handler: " + type + ", " + source + ", " + target);
+
+			if (!Character.isAlphabetic(event.getCharacter().charAt(0))) {
+				System.out.println("caracter: " + event.getCharacter() + ", solo se permite texto.");
+				event.consume();
+			}
+		});
+
+		pesoTextField.addEventFilter(KeyEvent.KEY_PRESSED, (e) -> {
+			System.out.print("Codigo: " + e.getCode().getChar() + "-> " + e.getCode().getCode());
+			System.out.println(" Texto: " + e.getText());
+		});
+
+		pesoTextField.addEventFilter(KeyEvent.KEY_TYPED, (e) -> {
+			System.out.println("Caracter: " + e.getCharacter());
+			if (!Character.isDigit(e.getCharacter().charAt(0))) {
+				e.consume();
+				System.out.println("Solo se admiten numeros.");
+			}
+		});
+		especieComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+			System.out.println("Antiguo -> " + oldValue + "\n" + "Nuevo -> " + newValue);
+		});
+	}
+
+	private void mostrarTecla(KeyEvent event, String accion) {
+		System.out.println("Tecla " + accion + " " + event.getEventType().getName() + ": " + event.getCode() + ","
+				+ " Key text " + event.getEventType().getName() + ": " + event.getText() + "," + " Key character "
+				+ event.getEventType().getName() + ": " + (int) event.getCharacter().charAt(0));
 	}
 
 	/**
